@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alnice Collection</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Alnice Collection</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#kitchen">Kitchen</a></li>
+                    <li><a href="#appliances">Appliances</a></li>
+                    <li><a href="#electronics">Electronics</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+          <div class="header-actions">
+    <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search products..." id="searchInput">
+    <button class="search-btn" onclick="searchProducts()">Search</button>
+</div>
+
+<script>
+function searchProducts() {
+    var text = document.getElementById('searchInput').value.toLowerCase();
+    
+    if (text.includes('kitchen')) {
+        document.getElementById('kitchen').scrollIntoView();
+    }
+    else if (text.includes('appliance')) {
+        document.getElementById('appliances').scrollIntoView();
+    }
+    else if (text.includes('electronic')) {
+        document.getElementById('electronics').scrollIntoView();
+    }
+    else if (text.includes('gallery')) {
+        document.getElementById('gallery').scrollIntoView();
+    }
+    else {
+        alert('Try: kitchen, appliances, electronics, gallery');
+    }
+}
+</script>
+</div>
+    
+</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Upgrade Your Home with Premium Technology</h1>
+                <p>Discover our curated collection of kitchen utensils, washing machines, and cutting-edge electronics</p>
+                <div class="hero-buttons">
+                    <a href="#kitchen" class="btn btn-primary">Shop Kitchen</a>
+                    <a href="#appliances" class="btn btn-secondary">View Appliances</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="kitchen.jpg" alt="Modern kitchen appliances">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="kitchen">
+                    <div class="category-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 10H21V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 10L12 2L21 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 15H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11 15H13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 15H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Kitchen Utensils</h3>
+                    <p>High-quality tools for your culinary creations</p>
+                </div>
+                <div class="category-card" data-category="appliances">
+                    <div class="category-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Washing Machines</h3>
+                    <p>Efficient and smart laundry solutions</p>
+                </div>
+                <div class="category-card" data-category="electronics">
+                    <div class="category-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L13.09 8.26L20 9.27L15 14.14L16.18 21.02L12 17.77L7.82 21.02L9 14.14L4 9.27L10.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Electronics</h3>
+                    <p>Innovative gadgets for modern living</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kitchen Products Section -->
+    <section id="kitchen" class="products-section">
+    <div class="container">
+        <h2 class="section-title">Kitchen Utensils</h2>
+        <div class="products-grid" id="kitchen-products">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://media.istockphoto.com/id/513815938/photo/set-of-knives-on-a-magnetic-base-isolated-on-white.jpg?s=612x612&w=0&k=20&c=2EQunKMPxHEItfJOrqENro1P-jRsdMFDgQTlXgqugoA=" alt="Professional Knife Set">
+                </div>
+                <div class="product-info">
+                    <h3>Professional Knife Set</h3>
+                    <p>High-quality stainless steel knives for precision cutting</p>
+                    <div class="product-price">$89.99</div>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="cookware.jpg" alt="Non-Stick Cookware Set">
+                </div>
+                <div class="product-info">
+                    <h3>Non-Stick Cookware Set</h3>
+                    <p>Complete set of durable non-stick pots and pans</p>
+                    <div class="product-price">$129.99</div>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Appliances Section -->
+    <section id="appliances" class="products-section">
+    <div class="container">
+        <h2 class="section-title">Washing Machines & Appliances</h2>
+        <div class="products-grid" id="appliance-products">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="frontload2.jpg" alt="Front Load Washing Machine">
+                </div>
+                <div class="product-info">
+                    <h3>Front Load Washer</h3>
+                    <p>Energy-efficient front loading washing machine with smart features</p>
+                    <div class="product-price">$699.99</div>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="freg.jpg" alt="Smart Refrigerator">
+                </div>
+                <div class="product-info">
+                    <h3>Smart Refrigerator</h3>
+                    <p>Wi-Fi enabled refrigerator with touch screen and camera</p>
+                    <div class="product-price">$1,299.99</div>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Electronics Section -->
+    <section id="electronics" class="products-section">
+    <div class="container">
+        <h2 class="section-title">Electronic Gadgets</h2>
+        <div class="products-grid" id="electronics-products">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="earbud.jpg" alt="Wireless Earbuds">
+                </div>
+                <div class="product-info">
+                    <h3>Wireless Earbuds</h3>
+                    <p>Premium sound quality with noise cancellation</p>
+                    <div class="product-price">$149.99</div>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="watch2.avif" alt="Smart Watch">
+                </div>
+                <div class="product-info">
+                    <h3>Smart Watch</h3>
+                    <p>Fitness tracking and smartphone connectivity</p>
+                    <div class="product-price">$199.99</div>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in touch to schedule a tour or ask any questions</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>Greater Accra<br>Ghana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>(+233) 246-760-004</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>bamissah@yahoo.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Full Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="apartmentType" name="apartmentType">
+                                <option value="">Select Category Type</option>
+                                <option value="studio">Kitchen</option>
+                                <option value="one-bedroom">Appliance</option>
+                                <option value="two-bedroom">Electronics</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Alnice Collection</h3>
+                    <p>Your trusted partner for premium home technology and kitchen essentials.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#kitchen">Kitchen</a></li>
+                        <li><a href="#appliances">Appliances</a></li>
+                        <li><a href="#electronics">Electronics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div id="contact" class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Greater Accra,Ghana</p>
+                    <p>Email: Bamissah96@yahoo.com</p>
+                    <p>Phone: (233) 246-760-004</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Alnice Collection. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be populated by JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="btn btn-primary checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+          
+</body>
+</html>
